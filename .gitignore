@@ -1,8 +1,50 @@
+# Node.js specific ignores
 *.js
 !jest.config.js
 *.d.ts
 node_modules
-
-# CDK asset staging directory
+.env
+# AWS CDK specific ignores
 .cdk.staging
 cdk.out
+# Rust specific ignores
+# Binaries for programs and libraries
+*.exe
+*.so
+*.dylib
+*.dll
+*.zip
+# Executable binaries and artifacts
+/target
+**/target
+debug/
+release/
+
+# Rust package manager files
+Cargo.lock
+Cargo.bak
+
+# IDEs and Editors
+*.rs.bk
+.idea/
+.vscode/
+*.iml
+
+# Misc
+.DS_Store
+Thumbs.db
+
+# Log files
+*.log
+
+# Temporary files
+*.tmp
+*.swp
+*.bak
+*.old
+
+# Byebug command history
+.byebug_history
+
+# Rust tool specific
+.cargo/
