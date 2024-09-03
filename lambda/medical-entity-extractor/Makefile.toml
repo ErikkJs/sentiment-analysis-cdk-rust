@@ -1,0 +1,11 @@
+
+[tasks.build]
+command = "cross"
+args = ["build", "--release", "--target", "x86_64-unknown-linux-musl"]
+
+[tasks.zip]
+command = "powershell"
+args = ["Compress-Archive", "-Path", ".\\target\\x86_64-unknown-linux-musl\\release\\bootstrap", "-DestinationPath", "medical-entity-extractor.zip", "-force"]
+
+[tasks.default]
+dependencies = ["build", "zip"]

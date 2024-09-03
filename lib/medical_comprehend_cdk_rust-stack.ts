@@ -10,7 +10,7 @@ export class MedicalComprehendStack extends cdk.Stack {
 
     const comprehendFunction = new lambda.Function(this, "ComprehendMedicalFunction", {
       runtime: lambda.Runtime.PROVIDED_AL2,
-      code: lambda.Code.fromAsset("lambda/medical_comprehend/medical_comprehend.zip"),
+      code: lambda.Code.fromAsset("lambda/medical-entity-extractor/medical-entity-extractor.zip"),
       handler: "medical_comprehend",
     });
 
